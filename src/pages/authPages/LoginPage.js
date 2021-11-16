@@ -1,8 +1,10 @@
 import React from "react";
 
-function LoginPage() {
-
-  return <div>Login</div>;
+function LoginPage(props) {
+  console.log("here")
+  return (
+    <div>Login</div>
+  );
 }
 
 export default LoginPage;

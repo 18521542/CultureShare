@@ -5,6 +5,7 @@ import RegisterPage from "./RegisterPage";
 
 function AuthPage(props) {
   const { isLogin } = props;
+  console.log(isLogin)
   return (
     <Routes>
       <Route exact path="login" element={<LoginPage />} />
