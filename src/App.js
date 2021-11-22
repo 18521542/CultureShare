@@ -6,11 +6,11 @@ import AuthPage from "./pages/authPages";
 function App() {
 
   return (
-    <div className="App">
+    <div className="App vh-100">
       <BrowserRouter>
         <Routes>
           <Route path="/auth/*" element={<AuthPage />} />
-          <Route path="/" element={<BasePage />} />
+          <Route path="/*" element={<BasePage />} />
           <Route element={<h3>Nothing here!</h3>} />
         </Routes>
       </BrowserRouter>
