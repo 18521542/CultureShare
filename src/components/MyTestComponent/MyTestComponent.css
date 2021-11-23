@@ -1,13 +1,12 @@
-
 .container {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid black;
-    background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  background-color: aquamarine;
 }
 
-.Test{
-    margin: 1em;
-    border: 1px solid beige;
-    background-color: blue;
+.Test {
+  margin: 1em;
+  border: 1px solid beige;
+  background-color: blue;
 }

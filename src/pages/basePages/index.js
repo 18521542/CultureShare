@@ -1,7 +1,7 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
-import LoginPage from "../authPages/LoginPage";
-import Home from "../Home";
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import LoginPage from '../authPages/LoginPage';
+import Home from '../Home';
 
 //URL: localhost:{$port}/auth/{$authPageURL}
 
@@ -12,7 +12,7 @@ function BasePage() {
     <div>
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route exact path="/login" element={<LoginPage/>}/>
+        {/* <Route exact path="/login" element={<LoginPage/>}/> */}
       </Routes>
     </div>
   );
