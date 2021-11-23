@@ -5,12 +5,12 @@ import Particles from '../ParticleComponent';
 class Home extends Component {
   render() {
     return (
-      <div className="home-container">
+      <div class="home-container">
         <Particles />
         {/* <div className="top-title">
-          <h1>WELCOME TO </h1>
-          <h2>Culture Share</h2>
-        </div> */}
+            <h1>WELCOME TO </h1>
+            <h2>Culture Share</h2>
+          </div> */}
         <div class="stage">
           <div class="layer"></div>
           <div class="layer"></div>

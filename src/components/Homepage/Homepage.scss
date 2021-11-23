@@ -2,6 +2,11 @@
 @import url('//fonts.googleapis.com/css?family=Roboto:700&text=css');
 @import url('//fonts.googleapis.com/css?family=Kaushan+Script&text=!');
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   //   min-height: 450px;
   //   height: 100vh;
@@ -23,8 +28,10 @@ body {
 }
 
 .layer {
-  width: 100%;
-  height: 100%;
+  // width: 100%;
+  // height: 100%;
+  text-align: center;
+  margin: 15vh 0px;
   position: absolute;
   transform-style: preserve-3d;
   animation: ಠ_ಠ 5s infinite alternate ease-in-out -7.5s;
@@ -33,9 +40,9 @@ body {
 }
 
 .layer:after {
-  font: 120px/0.65 'Pacifico', 'Kaushan Script', Futura, 'Roboto',
-    'Trebuchet MS', Helvetica, sans-serif;
-  content: 'Welcome\a    Culture Share!';
+  font: 90px/0.65 'Pacifico', 'Kaushan Script', Futura, 'Roboto', 'Trebuchet MS',
+    Helvetica, sans-serif;
+  content: 'Welcome  to\a\a Culture  Share!';
   white-space: pre;
   text-align: center;
   height: 100%;
@@ -172,22 +179,36 @@ body {
   width: 100vw;
   height: 100vh;
 }
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+// .main-container {
+//   display: flex;
+//   width: 100%;
+//   height: 100%;
+// }
+
 .home-container {
+  width: 100%;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  .top-title {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 60vh 0px;
-    color: var(--primary-color);
-    h1 {
-      font-size: 60px;
-    }
-    h2 {
-      font-size: 40px;
-    }
-  }
+  // .top-title {
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: center;
+  //   align-items: center;
+  //   margin: 60vh;
+  //   color: var(--primary-color);
+  //   text-align: center;
+  //   h1 {
+  //     font-size: 60px;
+  //   }
+  //   h2 {
+  //     font-size: 40px;
+  //   }
+  // }
 }
