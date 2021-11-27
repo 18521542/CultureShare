@@ -243,14 +243,17 @@ body {
 
 .main-container .small-image {
   width: 100%;
-  max-height: 200px;
+  height: 100%;
+  position: absolute;
   -o-object-fit: cover;
      object-fit: cover;
+  overflow: hidden;
 }
 
 .main-container .large-image {
+  position: absolute;
   width: 100%;
-  max-height: 450px;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -279,8 +282,14 @@ body {
   display: inline;
 }
 
-.main-container .item-content {
+.main-container .small-item-content {
   position: relative;
+  height: 200px;
+}
+
+.main-container .big-item-content {
+  position: relative;
+  height: 435px;
 }
 
 .item-content:first-child {

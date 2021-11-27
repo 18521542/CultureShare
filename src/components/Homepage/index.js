@@ -38,60 +38,79 @@ class Home extends Component {
             <p>This is the paragraph</p>
           </div> */}
           <div class="image-content">
-            <div class="item-content">
+            <div class="item-content small-item-content">
               <a href="/blog1">
-                <img class="small-image" id="img1" src="/img/france.jpeg"></img>
+                <img
+                  class="small-image"
+                  id="img1"
+                  src="/img/france.jpeg"
+                  alt="France"
+                ></img>
                 <span>France</span>
               </a>
             </div>
-            <div class="item-content">
+            <div class="item-content small-item-content">
               <a href="/blog2">
                 <img
                   class="small-image"
                   id="img2"
                   src="./img/greece.jpeg"
+                  alt="Greece"
                 ></img>
                 <span>Greece</span>
               </a>
             </div>
-            <div class="item-content">
+            <div class="item-content small-item-content">
               <a href="/blog3">
-                <img class="small-image" id="img3" src="./img/italy.jpeg"></img>
+                <img
+                  class="small-image"
+                  id="img3"
+                  src="./img/italy.jpeg"
+                  alt="Italy"
+                ></img>
                 <span>Italy</span>
               </a>
             </div>
-            <div class="item-content">
+            <div class="item-content big-item-content">
               <a href="/blog4">
                 <img
                   class="large-image"
                   id="img4"
                   src="./img/vietnam.jpeg"
+                  alt="Vietnam"
                 ></img>
                 <span>Viet Nam</span>
               </a>
             </div>
-            <div class="item-content">
+            <div class="item-content small-item-content">
               <a href="/blog5">
-                <img class="small-image" id="img5" src="./img/japan.jpeg"></img>
+                <img
+                  class="small-image"
+                  id="img5"
+                  src="./img/japan.jpeg"
+                  alt="Japan"
+                ></img>
                 <span>Japan</span>
               </a>
             </div>
-            <div class="item-content">
+            <div class="item-content small-item-content">
               <a href="/blog6">
                 <img
                   class="small-image"
                   id="img6"
                   src="./img/singapore.jpeg"
+                  alt="Singapore"
                 ></img>
                 <span>Singapore</span>
               </a>
             </div>
-            <div class="item-content">
+            <div class="item-content big-item-content">
               <a href="./blog7">
                 <img
                   class="large-image"
                   id="img7"
                   src="./img/thailan.jpeg"
+                  alt="Thailan"
                 ></img>
                 <span>Thailand</span>
               </a>

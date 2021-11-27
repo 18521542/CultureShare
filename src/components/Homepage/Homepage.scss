@@ -210,12 +210,17 @@ body {
   }
   .small-image {
     width: 100%;
-    max-height: 200px;
+    height: 100%;
+    // max-height: 200px;
+    position: absolute;
     object-fit: cover;
+    overflow: hidden;
   }
   .large-image {
+    position: absolute;
     width: 100%;
-    max-height: 450px;
+    height: 100%;
+    // max-height: 450px;
     object-fit: cover;
   }
   span {
@@ -238,8 +243,14 @@ body {
   img {
     display: inline;
   }
-  .item-content {
+  .small-item-content {
     position: relative;
+    height: 200px;
+  }
+  .big-item-content {
+    position: relative;
+    // grid gap + 2 small item: 35 + 200 x 2 = 435
+    height: 435px;
   }
 }
 
