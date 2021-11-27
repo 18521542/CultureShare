@@ -33,43 +33,67 @@ class Home extends Component {
           </div>
         </section>
         <section class="main-container">
-          <div class="header-content">
+          {/* <div class="header-content">
             <h1>Let's go to explore the new culture</h1>
             <p>This is the paragraph</p>
-          </div>
+          </div> */}
           <div class="image-content">
-            <div class="first-column">
-              <a>
-                <img id="img1" src="/img/france.jpeg"></img>
-                <span>This is image 1</span>
-              </a>
-              <a>
-                <img id="img2" src="./img/greece.jpeg"></img>
-                <span>This is image 2</span>
-              </a>
-              <a>
-                <img id="img3" src="./img/italy.jpeg"></img>
-                <span>This is image 3</span>
+            <div class="item-content">
+              <a href="/blog1">
+                <img class="small-image" id="img1" src="/img/france.jpeg"></img>
+                <span>France</span>
               </a>
             </div>
-            <div class="second-column">
-              <a>
-                <img id="img4" src="./img/vietnam.jpeg"></img>
-                <span>This is image 4</span>
-              </a>
-              <a>
-                <img id="img5" src="./img/japan.jpeg"></img>
-                <span>This is image 5</span>
+            <div class="item-content">
+              <a href="/blog2">
+                <img
+                  class="small-image"
+                  id="img2"
+                  src="./img/greece.jpeg"
+                ></img>
+                <span>Greece</span>
               </a>
             </div>
-            <div class="third-column">
-              <a>
-                <img id="img6" src="./img/singapore.jpeg"></img>
-                <span>This is image 6</span>
+            <div class="item-content">
+              <a href="/blog3">
+                <img class="small-image" id="img3" src="./img/italy.jpeg"></img>
+                <span>Italy</span>
               </a>
-              <a>
-                <img id="img7" src="./img/thailan.jpeg"></img>
-                <span>This is image 7</span>
+            </div>
+            <div class="item-content">
+              <a href="/blog4">
+                <img
+                  class="large-image"
+                  id="img4"
+                  src="./img/vietnam.jpeg"
+                ></img>
+                <span>Viet Nam</span>
+              </a>
+            </div>
+            <div class="item-content">
+              <a href="/blog5">
+                <img class="small-image" id="img5" src="./img/japan.jpeg"></img>
+                <span>Japan</span>
+              </a>
+            </div>
+            <div class="item-content">
+              <a href="/blog6">
+                <img
+                  class="small-image"
+                  id="img6"
+                  src="./img/singapore.jpeg"
+                ></img>
+                <span>Singapore</span>
+              </a>
+            </div>
+            <div class="item-content">
+              <a href="./blog7">
+                <img
+                  class="large-image"
+                  id="img7"
+                  src="./img/thailan.jpeg"
+                ></img>
+                <span>Thailand</span>
               </a>
             </div>
           </div>
