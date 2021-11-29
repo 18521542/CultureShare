@@ -1,9 +1,8 @@
 import "./index.css";
 import "antd/dist/antd.css";
 import React, { createElement } from "react";
-import {Avatar, Tabs,Card, Image,Col, Row,Button,  Pagination,Comment, Tooltip } from 'antd';
+import {Avatar, Tabs,Card, Image,Col, Row,Button,  Pagination} from 'antd';
 import Text from 'antd/lib/typography/Text';
-import { DownOutlined , UpOutlined  } from '@ant-design/icons';
 const { TabPane } = Tabs;
 const { Meta } = Card;
 const cardInfo = [
@@ -71,39 +70,12 @@ const renderCard = (card, index) => {
      
     );
   };
-  const ExampleComment = ({ children }) => (
-    <Comment
-      actions={[<span key="comment-nested-reply-to">Reply to</span>]}
-      author={<a>Han Solo</a>}
-      avatar={<Avatar src="https://joeschmoe.io/api/v1/random" alt="Han Solo" />}
-      content={
-        <p>
-          We supply a series of design principles, practical patterns and high quality design
-          resources (Sketch and Axure).
-        </p>
-      }
-    >
-      <Tooltip key="comment-basic-like" title="Like">
-        <span >
-          {createElement(  UpOutlined)}
-        </span>
-        <span style={{marginLeft:10}}>
-          1
-        </span>
-        <span style={{marginLeft:10}}>
-          {createElement( DownOutlined)}
-        </span>
-      </Tooltip>
-      {children}
-    </Comment>
-  );
+  
+const backgroundUrl="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-cover/dfaa3e7050e211ecb0507957d8f5fde3.jpeg";
 const UserPage = () => {
     return (
         <div className="mainBody">
-            <div >
-                <Avatar className="wallpaper"  shape="square"
-                src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-cover/9b39f2804d0911e78d979d841160f2c5.jpg"></Avatar>
-            </div>
+            <div style={{height:300,backgroundImage:`url(${backgroundUrl})` , marginTop:10}}></div>
             <Card className="panel-user" style={{ height: 400 }}>
             <Col  align="middle">
                 <Avatar className="avatar" alt="example" style={{ height: 150, width:150 }} 
@@ -126,29 +98,21 @@ const UserPage = () => {
                 <Col>
                 {cardInfo.map(renderCard)}
                 </Col>
+                <Pagination style={{marginTop:10,float:"right"}} defaultCurrent={1} total={50} />
               </TabPane>
               <TabPane tab="Favorite list" key="2">
               <Col>
                 {cardInfo.map(renderCard)}
                 {cardInfo.map(renderCard)}
                 </Col>
+                <Pagination style={{marginTop:10,float:"right"}} defaultCurrent={1} total={50} />
               </TabPane>
               <TabPane tab="Reading later" key="3">
-              <Col>
-              <ExampleComment>
-            <ExampleComment>
-              <ExampleComment />
-              <ExampleComment />
-            </ExampleComment>
-          </ExampleComment>
-              </Col>
-              <Pagination style={{marginTop:10,float:"right"}} defaultCurrent={1} total={50} />
+              
               </TabPane>
               
             </Tabs>
           </div>
-
-          <div style={{height:50,background:"#adb6c4", marginTop:10}}>THIS IS THE FOOTER</div>
         </div>
     )
 }
