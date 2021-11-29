@@ -292,3 +292,41 @@ body {
 .faded:hover::after {
   opacity: 0.15;
 }
+
+// responsive for mobile
+@media only screen and (max-width: 1024px) {
+  // fix the image to resize (main-content page
+  .main-container {
+    height: auto;
+    padding: 0px 0px;
+    .image-content {
+      display: block;
+    }
+    .small-item-content {
+      height: 300px;
+    }
+    .big-item-content {
+      height: 700px;
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  // fix the home page
+  .layer {
+    margin: 50vh 20vw;
+  }
+  .layer::after {
+    font: 45px/0.65 'Pacifico', 'Kaushan Script', Futura, 'Roboto',
+      'Trebuchet MS', Helvetica, sans-serif;
+  }
+}
+@media only screen and (max-width: 320px) {
+  // fix the home page
+  .layer {
+    margin: 50vh 10vw;
+  }
+  .layer::after {
+    font: 40px/0.6 'Pacifico', 'Kaushan Script', Futura, 'Roboto',
+      'Trebuchet MS', Helvetica, sans-serif;
+  }
+}
