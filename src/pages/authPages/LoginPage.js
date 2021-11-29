@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import useToggle from "../../utils/hooks/useToggle";
 
-<<<<<<< HEAD
 function LoginPage() {
   const [isShowPassword, setIsShowPassword] = useToggle(false);
 
@@ -83,12 +82,6 @@ function LoginPage() {
         </div>
       </div>
     </div>
-=======
-function LoginPage(props) {
-  console.log("here")
-  return (
-    <div>Login</div>
->>>>>>> 1487e213c5878559644afc00101c444815b3dcef
   );
 }
 
