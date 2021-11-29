@@ -39,7 +39,7 @@ class Home extends Component {
           </div> */}
           <div class="image-content">
             <div class="item-content small-item-content">
-              <a href="/blog1">
+              <a href="/blog1" class="faded">
                 <img
                   class="small-image"
                   id="img1"
@@ -50,7 +50,7 @@ class Home extends Component {
               </a>
             </div>
             <div class="item-content small-item-content">
-              <a href="/blog2">
+              <a href="/blog2" class="faded">
                 <img
                   class="small-image"
                   id="img2"
@@ -61,7 +61,7 @@ class Home extends Component {
               </a>
             </div>
             <div class="item-content small-item-content">
-              <a href="/blog3">
+              <a href="/blog3" class="faded">
                 <img
                   class="small-image"
                   id="img3"
@@ -72,7 +72,7 @@ class Home extends Component {
               </a>
             </div>
             <div class="item-content big-item-content">
-              <a href="/blog4">
+              <a href="/blog4" class="faded">
                 <img
                   class="large-image"
                   id="img4"
@@ -83,7 +83,7 @@ class Home extends Component {
               </a>
             </div>
             <div class="item-content small-item-content">
-              <a href="/blog5">
+              <a href="/blog5" class="faded">
                 <img
                   class="small-image"
                   id="img5"
@@ -94,7 +94,7 @@ class Home extends Component {
               </a>
             </div>
             <div class="item-content small-item-content">
-              <a href="/blog6">
+              <a href="/blog6" class="faded">
                 <img
                   class="small-image"
                   id="img6"
@@ -105,7 +105,7 @@ class Home extends Component {
               </a>
             </div>
             <div class="item-content big-item-content">
-              <a href="./blog7">
+              <a href="./blog7" class="faded">
                 <img
                   class="large-image"
                   id="img7"
