@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React from "react";
 import AuthPage from "../pages/authPages";
 import BasePage from "../pages/basePages"
-import UserPage from "../pages/userPages"
+import UserPage from "../pages/userPages/UserPage";
 
 export const RootRoute = (props) => {
     return (

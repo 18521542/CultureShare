@@ -1,0 +1,15 @@
+.background {
+  width:fit-content;
+  max-height: 5cm;
+}
+.user-collection-block{
+  margin-left: 1cm;
+  margin-top: 1cm;
+}
+.user-block{
+  margin-top: -2cm;
+}
+.backround-block{
+  height: 5cm;
+  background-image: url(https://cdn.wallpapersafari.com/6/29/qtCfLj.jpg);
+}
