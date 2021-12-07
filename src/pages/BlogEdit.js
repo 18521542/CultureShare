@@ -34,12 +34,12 @@ function BlogEdit() {
     [imgPath, setImgPath] = useState("banner.jpg");
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid" style={{ color: "#5e5873", lineHeight: 1.2 }}>
       <Breadcrumb title="Blog Edit" parent="Home" active="Edit" />
-      <div className="card m-0 border-light shadow w-100">
+      <div className="card mx-0 border-light shadow w-100 mb-3">
         <div className="card-body">
           <Avatar title="Johnny" image="/img/avatar-1.png" />
-          <form>
+          <form className="my-3">
             <div className="row">
               <div className="mb-3 col-md-6 fs-6">
                 <label className="form-label">Title</label>
@@ -59,13 +59,11 @@ function BlogEdit() {
                   onChange={(data) => setBlogCategories(data)}
                 />
               </div>
-            </div>
-            <div className="row">
               <div className="mb-3 col-md-6 fs-6">
                 <label className="form-label">Slug</label>
                 <input type="text" className="form-control fw-light" placeholder="johny blog" />
               </div>
-              <div className="mb-3 col-6">
+              <div className="mb-3 col-md-6">
                 <label className="form-label">Status</label>
                 <select
                   className="form-control fw-light"
@@ -76,15 +74,58 @@ function BlogEdit() {
                   <option value="Draft">Draft</option>
                 </select>
               </div>
-            </div>
-            <div className="mb-3">
-              <label className="form-label">Slug</label>
-              <Editor
-                editorClassName="border border-1"
-                toolbarClassName="border border-1 border-bottom-0 mb-0"
-                editorState={content}
-                onEditorStateChange={(data) => setContent(data)}
-              />
+              <div className="mb-3 col-12">
+                <label className="form-label">Content</label>
+                <Editor
+                  editorClassName="border border-1"
+                  toolbarClassName="border border-1 border-bottom-0 mb-0"
+                  editorState={content}
+                  onEditorStateChange={(data) => setContent(data)}
+                />
+              </div>
+
+              <div className="mb-2 col-12" sm="12">
+                <div className="border rounded p-2">
+                  <h4 className="mb-2">Featured Image</h4>
+                  <div className="card border-0 flex-column flex-md-row">
+                    <img
+                      className="rounded mr-2 mb-1 mb-md-0 img-fluid"
+                      src="./img/VietnamMountain.jpg"
+                      alt="featured img"
+                      width="170"
+                      height="110"
+                    />
+                    <div className="card-body">
+                      <small className="text-muted">
+                        Required image resolution 800x400, image size 10mb.
+                      </small>
+
+                      <p className="my-50">
+                        <a href="/" onClick={(e) => e.preventDefault()}>
+                          {`C:/fakepath/${imgPath}`}
+                        </a>
+                      </p>
+                      <div className="d-inline-block">
+                        <div className="mb-0">
+                          <input
+                            className="form-control"
+                            type="file"
+                            id="exampleCustomFileBrowser"
+                            name="customFile"
+                            accept=".jpg, .png, .gif"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-50 col d-flex flex-row-reverse">
+                <button color="primary" className="ms-3 btn btn-primary">
+                  Save Changes
+                </button>
+                <button className="btn btn-outline-secondary">Cancel</button>
+              </div>
             </div>
           </form>
         </div>
