@@ -12,7 +12,7 @@ export const RootRoute = (props) => {
                 <Route path="/auth/*" element={<AuthPage />} />
 
                 {/*base root*/}
-                <Route path="/" element={<BasePage />} />
+                <Route path="/*" element={<BasePage />} />
 
                 {/*user root*/}
                 <Route path="/user/*" element={<UserPage/>}/>
