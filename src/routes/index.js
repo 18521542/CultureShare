@@ -4,6 +4,7 @@ import AuthPage from "../pages/authPages";
 import BasePage from "../pages/basePages"
 import UserPage from "../pages/userPages/UserPage";
 import { AddCommentForm } from "../components/Comment/AddCommentForm";
+import { TestRoutes } from "./TestRoutes.js";
 
 export const RootRoute = (props) => {
     return (
@@ -20,6 +21,7 @@ export const RootRoute = (props) => {
                 <Route path="/comment" element={<AddCommentForm/>}/>
                 <Route element={<h3>Nothing here!</h3>} />
             </Routes>
+            <TestRoutes/>
       </BrowserRouter>
     )
 }
