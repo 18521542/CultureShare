@@ -7,7 +7,7 @@ import { RootRoute } from "./routes";
 //root URL
 function App() {
   return (
-    <div className="App">
+    <div className="App vh-100">
       <RootRoute/>
     </div>
   );
