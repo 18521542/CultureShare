@@ -14,7 +14,7 @@ function LoginPage() {
         <div className="card-body">
           <h5 className="card-title text-center">Welcome to Culture Share</h5>
           <p className="card-text fw-light">
-            Please sign-in to your account and start the adventure
+            Please <strong>sign in</strong> to your account and start the adventure
           </p>
           <form className="fw-light">
             <div className="mb-3">
@@ -53,7 +53,7 @@ function LoginPage() {
           </form>
           <p className="#">
             <span className="mr-25">New on our platform?</span>
-            <Link to="#">
+            <Link to="/auth/register">
               <span>Create an account</span>
             </Link>
           </p>
