@@ -6,37 +6,12 @@ class Home extends Component {
   render() {
     return (
       <div class="homepage-container">
-        <Particles />
-        <section class="home-container">
-          {/* <Particles /> */}
-          <div class="stage">
-            <div class="layer"></div>
-            <div class="layer"></div>
-            <div class="layer"></div>
-            <div class="layer"></div>
-            <div class="layer"></div>
-            <div class="layer"></div>
-            <div class="layer"></div>
-            <div class="layer"></div>
-            <div class="layer"></div>
-            <div class="layer"></div>
-            <div class="layer"></div>
-            <div class="layer"></div>
-            <div class="layer"></div>
-            <div class="layer"></div>
-            <div class="layer"></div>
-            <div class="layer"></div>
-            <div class="layer"></div>
-            <div class="layer"></div>
-            <div class="layer"></div>
-            <div class="layer"></div>
-          </div>
-        </section>
         <section class="main-container">
           {/* <div class="header-content">
             <h1>Let's go to explore the new culture</h1>
             <p>This is the paragraph</p>
           </div> */}
+          <Particles />
           <div class="image-content">
             <div class="item-content small-item-content">
               <a href="/blog1" class="faded">
@@ -123,3 +98,29 @@ class Home extends Component {
 }
 
 export default Home;
+
+// <section class="home-container">
+//   {/* <Particles /> */}
+//   <div class="stage">
+//     <div class="layer"></div>
+//     <div class="layer"></div>
+//     <div class="layer"></div>
+//     <div class="layer"></div>
+//     <div class="layer"></div>
+//     <div class="layer"></div>
+//     <div class="layer"></div>
+//     <div class="layer"></div>
+//     <div class="layer"></div>
+//     <div class="layer"></div>
+//     <div class="layer"></div>
+//     <div class="layer"></div>
+//     <div class="layer"></div>
+//     <div class="layer"></div>
+//     <div class="layer"></div>
+//     <div class="layer"></div>
+//     <div class="layer"></div>
+//     <div class="layer"></div>
+//     <div class="layer"></div>
+//     <div class="layer"></div>
+//   </div>
+// </section>;
