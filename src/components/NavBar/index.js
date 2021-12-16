@@ -8,7 +8,7 @@ function NavBar() {
   const [isOpen, toggle] = useToggle(false);
   console.log(isOpen);
   return (
-    <nav className="container header-navbar navbar align-items-center fixed-top navbar-expand-lg navbar-light">
+    <nav className="container-fluid header-navbar navbar align-items-center fixed-top navbar-expand-lg navbar-light">
       <div
         className="shadow d-flex justify-content-between bg-light w-100 rounded px-3"
         style={{ height: 62 }}>
