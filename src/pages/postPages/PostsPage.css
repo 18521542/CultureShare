@@ -19,7 +19,7 @@
     padding:10px 0 10px 0;
 }
 
-.post-list-container {
+.posts-list-container {
     height: 1200px;
     border-width: 10px;
     border-color: black;
@@ -31,4 +31,15 @@
 .title {
     color: brown;
     font-size: 100px;
+}
+
+.Detail-container{
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.List-container{
+    flex-direction: row;
+    display: flex;
 }

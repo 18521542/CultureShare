@@ -1,7 +1,10 @@
 import React from "react";
 import { Post } from "../../components/Post/Post";
 import './PostsPage.css'
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import Button from 'react-bootstrap/Button';
+import { useState } from "react";
 const data =[ {
     title: "Các vấn đề hiện đại của phương Tây",
     user:{
@@ -36,29 +39,65 @@ function PostsPage(props) {
     const pageName = threadName || "FORUM 1";
     const posts = threadPosts || data;
 
+    const [PostStyleOption, setPostStyleOption] = useState("List")
+
     const renderListPost = () => {
+        
         return (
-            <div>
-                <Post/>
+            <div className={`${PostStyleOption}-container`}>
+                <Post
+                    styleOption={PostStyleOption}
+                />
+                <Post
+                    styleOption={PostStyleOption}
+                />
+                <Post
+                    styleOption={PostStyleOption}
+                />
+                <Post
+                    styleOption={PostStyleOption}
+                />
+                <Post
+                    styleOption={PostStyleOption}
+                />
+                <Post
+                    styleOption={PostStyleOption}
+                />
+                <Post
+                    styleOption={PostStyleOption}
+                />
             </div>
         )
     }
+    const handleClick=(e)=>{
+        setPostStyleOption(e.target.value)
+    }
+
+    const renderTwoButton = () => (            
+        <ButtonGroup onClick={handleClick}>
+            <Button variant="primary" value={"Detail"}>Detail</Button>
+            <Button variant="danger" value={"List"}>List</Button>
+        </ButtonGroup>
+    )
         
     return (
         <div className="thread-container">
-
+            {/* Thread name */}
             <div className="header-container">
                 <span className="title">{`${pageName}`}</span>
             </div>
                 
+            {/* 2 btn */}
             <div className="action-container">
-                <span className="btn-change-style">change style</span>
+                {renderTwoButton()}
                 <span className="btn-add">add</span>
             </div>
 
-            <div className="post-list-container">
+            {/* List */}
+            <div className="posts-list-container">
                 {renderListPost()}
             </div>
+
         </div>    
     );
 }
