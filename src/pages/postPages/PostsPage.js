@@ -5,34 +5,36 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Button from 'react-bootstrap/Button';
 import { useState } from "react";
-const data =[ {
-    title: "Các vấn đề hiện đại của phương Tây",
-    user:{
-        name:"MrBlack",
-        avatarLink:"https://static2.yan.vn/YanNews/2167221/202102/facebook-cap-nhat-avatar-doi-voi-tai-khoan-khong-su-dung-anh-dai-dien-e4abd14d.jpg" 
-    }
-},
-{
-    title: "Các vấn đề hiện đại của phương Tây",
-    user:{
-        name:"MrBlack",
-        avatarLink:"https://static2.yan.vn/YanNews/2167221/202102/facebook-cap-nhat-avatar-doi-voi-tai-khoan-khong-su-dung-anh-dai-dien-e4abd14d.jpg" 
-    }
-},
-{
-    title: "Các vấn đề hiện đại của phương Tây",
-    user:{
-        name:"MrBlack",
-        avatarLink:"https://static2.yan.vn/YanNews/2167221/202102/facebook-cap-nhat-avatar-doi-voi-tai-khoan-khong-su-dung-anh-dai-dien-e4abd14d.jpg" 
-    }
-},
-{
-    title: "Các vấn đề hiện đại của phương Tây",
-    user:{
-        name:"MrBlack",
-        avatarLink:"https://static2.yan.vn/YanNews/2167221/202102/facebook-cap-nhat-avatar-doi-voi-tai-khoan-khong-su-dung-anh-dai-dien-e4abd14d.jpg" 
-    }
-},]
+const data =[ 
+    {
+        title: "Các vấn đề hiện đại của phương Tây",
+        user:{
+            name:"MrBlack",
+            avatarLink:"https://static2.yan.vn/YanNews/2167221/202102/facebook-cap-nhat-avatar-doi-voi-tai-khoan-khong-su-dung-anh-dai-dien-e4abd14d.jpg" 
+        }
+    },
+    {
+        title: "Các vấn đề hiện đại của phương Tây",
+        user:{
+            name:"MrBlack",
+            avatarLink:"https://static2.yan.vn/YanNews/2167221/202102/facebook-cap-nhat-avatar-doi-voi-tai-khoan-khong-su-dung-anh-dai-dien-e4abd14d.jpg" 
+        }
+    },
+    {
+        title: "Các vấn đề hiện đại của phương Tây",
+        user:{
+            name:"MrBlack",
+            avatarLink:"https://static2.yan.vn/YanNews/2167221/202102/facebook-cap-nhat-avatar-doi-voi-tai-khoan-khong-su-dung-anh-dai-dien-e4abd14d.jpg" 
+        }
+    },
+    {
+        title: "Các vấn đề hiện đại của phương Tây",
+        user:{
+            name:"MrBlack",
+            avatarLink:"https://static2.yan.vn/YanNews/2167221/202102/facebook-cap-nhat-avatar-doi-voi-tai-khoan-khong-su-dung-anh-dai-dien-e4abd14d.jpg" 
+        }
+    },
+]
 
 function PostsPage(props) {
     const { threadName, threadPosts } = props;
@@ -41,34 +43,12 @@ function PostsPage(props) {
 
     const [PostStyleOption, setPostStyleOption] = useState("List")
 
-    const renderListPost = () => {
-        
-        return (
-            <div className={`${PostStyleOption}-container`}>
-                <Post
-                    styleOption={PostStyleOption}
-                />
-                <Post
-                    styleOption={PostStyleOption}
-                />
-                <Post
-                    styleOption={PostStyleOption}
-                />
-                <Post
-                    styleOption={PostStyleOption}
-                />
-                <Post
-                    styleOption={PostStyleOption}
-                />
-                <Post
-                    styleOption={PostStyleOption}
-                />
-                <Post
-                    styleOption={PostStyleOption}
-                />
-            </div>
-        )
-    }
+    const renderListPosts = posts.map(item => (
+        <Post
+            styleOption={PostStyleOption}
+            title={item.title}
+        />
+    ))
     const handleClick=(e)=>{
         setPostStyleOption(e.target.value)
     }
@@ -90,12 +70,14 @@ function PostsPage(props) {
             {/* 2 btn */}
             <div className="action-container">
                 {renderTwoButton()}
-                <span className="btn-add">add</span>
+                <span className="btn-add"><Button variant="success">Add</Button>{' '}</span>
             </div>
 
             {/* List */}
             <div className="posts-list-container">
-                {renderListPost()}
+                <div className={`${PostStyleOption}-container`}>
+                    {renderListPosts}
+                </div>
             </div>
 
         </div>    

@@ -1,7 +1,6 @@
 .thread-container{
     padding: 100px;
-    height: 1200px;
-
+    min-height: none;
 }
 
 .header-container{
@@ -20,12 +19,9 @@
 }
 
 .posts-list-container {
-    height: 1200px;
-    border-width: 10px;
-    border-color: black;
-    background-color: brown;
-    margin-bottom: 100px;
-    padding: 10px;
+    /* height: 1200px; */
+    background-color: #f7e3e1;
+    padding: 50px 10px 50px 10px;
 }
 
 .title {
@@ -34,12 +30,14 @@
 }
 
 .Detail-container{
-    flex-direction: column;
+    flex-direction: row;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .List-container{
-    flex-direction: row;
+    flex-direction: column;
     display: flex;
+    align-items: center;
 }

@@ -3,16 +3,23 @@ import './Post.css'
 export const  Post = (props) => {
     const { user, title, description, styleOption } = props;
 
-    const renderInfo = {
-        styleOption: styleOption || "Detail",
+    const Info = {
         user: user || "test user",
         title: title || "Đây là title để test chứ chả có gì cả",
         description: description || "Một nụ cười luôn hé, thế giới vẫn quay, còn tôi vẫn nơi đây đêm nằm mơ,..."
     }
 
+    const renderTitle = () => (
+        <div>{Info.title}</div>
+    )
+
     return(
         (styleOption==="Detail") ? 
-        (<div className="post-list-container"></div>) : 
-        (<div className="post-detail-container"></div>)
+        (<div className="post-detail-container">
+            {renderTitle()}
+        </div>) : 
+        (<div className="post-list-container">
+            {renderTitle()}
+        </div>)
     )
 }
