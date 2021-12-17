@@ -13,12 +13,16 @@ export const  Post = (props) => {
         <div>{Info.title}</div>
     )
 
+    const handleClick = () => {
+        
+    }
+
     return(
         (styleOption==="Detail") ? 
-        (<div className="post-detail-container">
+        (<div className="post-detail-container" onClick={handleClick}>
             {renderTitle()}
         </div>) : 
-        (<div className="post-list-container">
+        (<div className="post-list-container" onClick={handleClick}>
             {renderTitle()}
         </div>)
     )
