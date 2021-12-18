@@ -90,7 +90,7 @@ function BlogEdit() {
                   <div className="card border-0 flex-column flex-md-row">
                     <img
                       className="rounded mr-2 mb-1 mb-md-0 img-fluid"
-                      src="./img/VietnamMountain.jpg"
+                      src="/img/VietnamMountain.jpg"
                       alt="featured img"
                       width="170"
                       height="110"
