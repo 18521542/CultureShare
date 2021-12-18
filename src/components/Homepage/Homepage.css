@@ -205,12 +205,8 @@ body {
   height: 100vh;
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
-  overflow-y: scroll;
 }
 
-.homepage-container section {
-  scroll-snap-align: start;
-}
 
 .home-container {
   background-position: center;
