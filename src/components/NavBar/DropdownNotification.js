@@ -10,8 +10,8 @@ function DropdownNotification() {
         data-bs-toggle="dropdown"
         aria-haspopup="true"
         aria-expanded="false">
-        <span className="position-absolute translate-middle badge rounded-pill bg-danger fw-bold" style={{fontSize: 10, left:25}}>
-          9
+        <span className="position-absolute translate-middle badge rounded-pill bg-danger fw-bold" style={{fontSize: 10, left:35}}>
+          3
           <span className="visually-hidden">unread messages</span>
         </span>
         <i className="fas fa-bell fa-lg"></i>
