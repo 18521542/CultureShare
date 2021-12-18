@@ -1,54 +1,37 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { Post } from "../../components/Post/Post";
 import './PostsPage.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Button from 'react-bootstrap/Button';
-import { useState } from "react";
 import { ToggleButton } from "react-bootstrap";
-const data =[ 
-    {
-        title: "Các vấn đề hiện đại của phương Tây",
-        user:{
-            name:"MrBlack",
-            avatarLink:"https://static2.yan.vn/YanNews/2167221/202102/facebook-cap-nhat-avatar-doi-voi-tai-khoan-khong-su-dung-anh-dai-dien-e4abd14d.jpg" 
-        }
-    },
-    {
-        title: "Các vấn đề hiện đại của phương Tây",
-        user:{
-            name:"MrBlack",
-            avatarLink:"https://static2.yan.vn/YanNews/2167221/202102/facebook-cap-nhat-avatar-doi-voi-tai-khoan-khong-su-dung-anh-dai-dien-e4abd14d.jpg" 
-        }
-    },
-    {
-        title: "Các vấn đề hiện đại của phương Tây",
-        user:{
-            name:"MrBlack",
-            avatarLink:"https://static2.yan.vn/YanNews/2167221/202102/facebook-cap-nhat-avatar-doi-voi-tai-khoan-khong-su-dung-anh-dai-dien-e4abd14d.jpg" 
-        }
-    },
-    {
-        title: "Các vấn đề hiện đại của phương Tây",
-        user:{
-            name:"MrBlack",
-            avatarLink:"https://static2.yan.vn/YanNews/2167221/202102/facebook-cap-nhat-avatar-doi-voi-tai-khoan-khong-su-dung-anh-dai-dien-e4abd14d.jpg" 
-        }
-    },
-]
+import { threads } from "../../dummydata/posts";
 
-function PostsPage(props) {
-    const { threadName, threadPosts } = props;
-    const pageName = threadName || "FORUM 1";
-    const posts = threadPosts || data;
+function PostsPage() {
+    const { country } = useParams();
+
+    const [name, setName] = useState(null);
+    const [posts, setPosts] = useState(null);
 
     const [PostStyleOption, setPostStyleOption] = useState("List")
     const state = "List";
 
-    const renderListPosts = posts.map(item => (
+    useEffect(() =>{
+        const thread = threads.filter(item => item.threadId == country);
+        setPosts(thread[0].posts);
+        setName(thread[0].title);
+    },[])
+
+    const renderListPosts = posts && posts.map((item, idx) => (
         <Post
             styleOption={PostStyleOption}
             title={item.title}
+            user={item.user}
+            description={item.description}
+            country={country}
+            postId={item.id}
+            key={idx}
         />
     ))
     const handleClick=(e) => {
@@ -102,7 +85,7 @@ function PostsPage(props) {
         <div className="thread-container">
             {/* Thread name */}
             <div className="header-container">
-                <span className="title">{`${pageName}`}</span>
+                <span className="title culture-font">{`${name}`}</span>
             </div>
                 
             {/* 2 btn */}

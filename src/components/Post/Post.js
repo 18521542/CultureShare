@@ -1,29 +1,18 @@
-import './Post.css'
+import "./Post.css";
+import { Link } from "react-router-dom";
 
-export const  Post = (props) => {
-    const { user, title, description, styleOption } = props;
+export const Post = (props) => {
+  const { user, title, description, styleOption, country, postId } = props;
 
-    const Info = {
-        user: user || "test user",
-        title: title || "Đây là title để test chứ chả có gì cả",
-        description: description || "Một nụ cười luôn hé, thế giới vẫn quay, còn tôi vẫn nơi đây đêm nằm mơ,..."
-    }
+  const renderTitle = () => <div>{title}</div>;
 
-    const renderTitle = () => (
-        <div>{Info.title}</div>
-    )
+  const handleClick = () => {};
 
-    const handleClick = () => {
-        
-    }
-
-    return(
-        (styleOption==="Detail") ? 
-        (<div className="post-detail-container" onClick={handleClick}>
-            {renderTitle()}
-        </div>) : 
-        (<div className="post-list-container" onClick={handleClick}>
-            {renderTitle()}
-        </div>)
-    )
-}
+  return (
+    <Link 
+      className={styleOption === "Detail" ? "post-detail-container" : "post-list-container"}
+      to={`/${country}/${postId}`}>
+      {renderTitle()}
+    </Link>
+  );
+};

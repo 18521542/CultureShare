@@ -1,36 +1,36 @@
 import { Divider } from "antd";
-import React from "react"
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { AddCommentForm } from "../../components/Comment/AddCommentForm";
 import { PostDetail } from "../../components/PostDetail/PostDetail";
-import './PostDetailPage.css'
+import "./PostDetailPage.css";
+import { threads } from "../../dummydata/posts";
 
+const PostDetailPage = (props) => {
+  const { country, postId } = useParams();
+  const [post, setPost] = useState(null);
 
-export const PostDetailPage = (props) => {
-    const { users } = props;
+  useEffect(() => {
+    const thread = threads.filter((item) => item.threadId == country);
+    const posts = thread[0].posts;
+    const tpost = posts.filter((item) => item.id == postId);
+    setPost(tpost[0]);
+  }, []);
 
-    const Info = users || [
-        {
-            username:"Tiki",
-            comment:"Bài viết này hay quá khá là cuốn hút tôi muốn có thêm tư liệu về nó",
-            avatar:"https://cdn-icons-png.flaticon.com/512/147/147144.png"
-        }
-    ]
-
-    const renderInfo = Info.map(item => {
-        console.log("item")
-        return(
-            <PostDetail
-                {...item}
-            />
-        )
-    })
-    return(
-        <div style={{
-            padding: "10px",
-        }}>
-            {renderInfo}
-            <Divider>BÌNH LUẬN</Divider>
-            <AddCommentForm/>
-        </div>
-    )
-}
+  return (
+    <div
+      style={{
+        padding: "10px"
+      }}>
+      {post && (
+        <PostDetail
+          {...post}
+          content={post.description}
+        />
+      )}
+      <Divider>BÌNH LUẬN</Divider>
+      <AddCommentForm />
+    </div>
+  );
+};
+export default PostDetailPage;
