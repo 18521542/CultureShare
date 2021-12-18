@@ -1,0 +1,44 @@
+.thread-container{
+    padding: 100px;
+    min-height: none;
+}
+
+.header-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.action-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:10px 0 10px 0;
+}
+
+.posts-list-container {
+    /* height: 1200px; */
+    background-color: #f7e3e1;
+    padding: 50px 10px 50px 10px;
+}
+
+.title {
+    color: brown;
+    font-size: 100px;
+}
+
+.Detail-container{
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.List-container{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
