@@ -7,6 +7,7 @@ import Popper from 'popper.js';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "flag-icon-css/css/flag-icons.min.css";
+import "./assets/style.scss";
 
 ReactDOM.render(
   <React.StrictMode>
