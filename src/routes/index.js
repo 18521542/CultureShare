@@ -5,6 +5,8 @@ import RegisterPage from "../pages/authPages/RegisterPage";
 import UserPage from "../pages/userPages";
 import Home from "../pages/Home";
 import CommonPage from "../pages/CommonPage";
+import { AddCommentForm } from "../components/Comment/AddCommentForm";
+import BlogEdit from "../pages/BlogEdit"
 
 export const RootRoute = () => {
   return (
@@ -18,6 +20,8 @@ export const RootRoute = () => {
           {/* put all pages that use common page layout here */}
           <Route exact path="/" element={<Home />} />
           <Route path="/user" element={<UserPage />} />
+          <Route path="/comment" element={<AddCommentForm/>}/>
+          <Route path="/post/:postId" element={<BlogEdit />}/>
         </Route>
       </Routes>
     </BrowserRouter>
