@@ -1,18 +1,27 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import useToggle from "../../utils/hooks/useToggle";
+import AppContext from "../../utils/AppContext";
 
 function LoginPage() {
+  const { setLogin } = useContext(AppContext);
+  const navigate = useNavigate();
   const [isShowPassword, setIsShowPassword] = useToggle(false);
 
-  const clickHandle = (e) => {
+  const clickHandle = () => {
     setIsShowPassword(!isShowPassword);
   };
+
+  const loginHandler = () => {
+    setLogin(true);
+    navigate("/");
+  };
+
   return (
     <div className="d-flex h-100 justify-content-center align-items-center">
       <div className="card m-0 border-light shadow" style={{ width: 400 }}>
         <div className="card-body">
-          <h5 className="card-title text-center">Welcome to Culture Share</h5>
+          <h5 className="card-title text-center culture-font">Welcome to Culture Share</h5>
           <p className="card-text fw-light">
             Please <strong>sign in</strong> to your account and start the adventure
           </p>
@@ -49,7 +58,7 @@ function LoginPage() {
               <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
               <label className="form-check-label">Remember me</label>
             </div>
-            <input className="btn btn-primary w-100 mb-3" type="submit" value="Sign in"></input>
+            <input className="btn btn-primary w-100 mb-3" onClick={loginHandler} value="Sign in"></input>
           </form>
           <p className="#">
             <span className="mr-25">New on our platform?</span>
@@ -64,16 +73,19 @@ function LoginPage() {
           </div>
           <div className="d-flex justify-content-center">
             <button
+            loginHandler
               className="btn p-0"
               style={{ backgroundColor: "#3b5998", width: 35, height: 35 }}>
               <i className="fab fa-facebook-f"></i>
             </button>
             <button
+            loginHandler
               className="btn mx-3 p-0"
               style={{ backgroundColor: "#55acee", width: 35, height: 35 }}>
               <i className="fab fa-twitter"></i>
             </button>
             <button
+            loginHandler
               className="btn p-0"
               style={{ backgroundColor: "#dd4b39", width: 35, height: 35 }}>
               <i className="fab fa-google"></i>
