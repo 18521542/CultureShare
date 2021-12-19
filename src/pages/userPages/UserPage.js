@@ -6,7 +6,7 @@ import { UserCollection } from "../../components/User/UserCollection";
 import './UserPage.css';
 const UserPage = () => {
     return (
-        <div>
+        <div className="userpage-container">
             <Row justify="center" >
                 <Col className="backround-block" flex="90%"  />
             </Row>

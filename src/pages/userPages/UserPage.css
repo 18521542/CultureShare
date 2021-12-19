@@ -13,3 +13,7 @@
   height: 5cm;
   background-image: url(https://cdn.wallpapersafari.com/6/29/qtCfLj.jpg);
 }
+
+.userpage-container{
+  min-width: 1500px;
+}
