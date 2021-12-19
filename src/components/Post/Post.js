@@ -34,7 +34,6 @@ export const Post = (props) => {
           </span>
         
       </div>
-      
 
       <div className="created-by">
         <span style={{fontWeight:"bold"}}>Created By:</span>
@@ -49,8 +48,33 @@ export const Post = (props) => {
   )
 
   const renderPostContentViaListStyle = () => (
-    <div>
-      List
+    <div className="contentContainer-post-list">
+      <div className="userInfo-post-list">
+        <img
+          src={user.avatar}
+          className="listStyle-userAvatar"
+        />
+        <div style={{fontWeight:"bold"}}>{user.name}</div>
+      </div>
+
+      <div className="postInfo-post-list">
+          <div className="listStyle-postInfo-title">
+            <span style={{fontWeight:"bold"}}>Tiêu đề: </span>
+            <span style={{fontWeight:100}}>{title}</span>
+          </div>
+          <div style={{padding:10}}>
+            {description}
+          </div>
+          <div className="link-post-list">
+            <Link 
+              to={`/${country}/${postId}`}>
+              {<span style={{marginLeft: "10px"}}>{`Xem thêm`}</span>}
+            </Link>
+          </div>
+      </div>
+
+      
+        
     </div>
   )
 

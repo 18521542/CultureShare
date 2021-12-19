@@ -23,6 +23,7 @@
     display: flex;
     justify-content: center;
     min-width: 380px;
+    padding: 10px;
 }
 
 .title {
