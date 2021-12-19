@@ -1,13 +1,18 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import useToggle from "../../utils/hooks/useToggle";
-import DropdownNotification from "./DropdownNotification";
+import React, { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import DropdownLanguage from "./DropdownLanguage";
 import DropdownUser from "./DropdownUser";
+import DropdownThread from "./DropdownThread";
+import AppContext from "../../utils/AppContext";
 
 function NavBar() {
-  const [isOpen, toggle] = useToggle(false);
-  console.log(isOpen);
+  const { login, setLogin } = useContext(AppContext);
+  const navigate = useNavigate();
+
+  const logout = () => {
+    setLogin(false);
+    navigate("/");
+  };
   return (
     <nav className="fixed-top navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
@@ -32,12 +37,10 @@ function NavBar() {
               </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                Features
-              </a>
+              <DropdownThread />
             </li>
           </ul>
-          <form className="d-flex">
+          <form className="d-flex me-2">
             <div className="d-flex input-group">
               <input
                 className="form-control"
@@ -45,15 +48,17 @@ function NavBar() {
                 placeholder="Search"
                 aria-label="Search"
               />
-              <button className="btn btn-outline-success" type="submit">
-                Search
-              </button>
             </div>
           </form>
         </div>
-        <DropdownNotification />
         <DropdownLanguage />
-        <DropdownUser />
+        {login ? (
+          <DropdownUser logout={logout} />
+        ) : (
+          <Link className="link-primary" to="/auth/login">
+            Đăng nhập/Đăng ký
+          </Link>
+        )}
       </div>
     </nav>
   );
