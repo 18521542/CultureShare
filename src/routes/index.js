@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React from "react";
 import LoginPage from "../pages/authPages/LoginPage";
 import RegisterPage from "../pages/authPages/RegisterPage";
-import UserPage from "../pages/userPages";
+import UserPage from "../pages/userPages/UserPage";
 import Home from "../pages/Home";
 import CommonPage from "../pages/CommonPage";
 import { AddCommentForm } from "../components/Comment/AddCommentForm";
