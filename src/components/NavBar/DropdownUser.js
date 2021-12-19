@@ -1,8 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-function DropdownUser() {
+function DropdownUser({logout}) {
+  
   return (
-    <div className="dropdown">
+    <div className="dropdown me-2">
       <a
         className="btn btn-light d-flex align-items-center"
         id="dropdown-user"
@@ -27,30 +29,21 @@ function DropdownUser() {
         </div>
       </a>
       <div className="dropdown-menu" aria-labelledby="dropdown-user">
+        <Link className="dropdown-item" to="/user">
+          <i className="mr-50" data-feather="user"></i> Trang cá nhân
+        </Link>
         <a className="dropdown-item" href="#">
-          <i className="mr-50" data-feather="user"></i> Profile
-        </a>
-        <a className="dropdown-item" href="#">
-          <i className="mr-50" data-feather="mail"></i> Inbox
-        </a>
-        <a className="dropdown-item" href="#">
-          <i className="mr-50" data-feather="check-square"></i> Task
-        </a>
-        <a className="dropdown-item" href="#">
-          <i className="mr-50" data-feather="message-square"></i> Chats
+          <i className="mr-50" data-feather="mail"></i> Tin nhắn
         </a>
         <div className="dropdown-divider"></div>
         <a className="dropdown-item" href="#">
-          <i className="mr-50" data-feather="settings"></i> Settings
-        </a>
-        <a className="dropdown-item" href="#">
-          <i className="mr-50" data-feather="credit-card"></i> Pricing
+          <i className="mr-50" data-feather="settings"></i> Cài đặt
         </a>
         <a className="dropdown-item" href="#">
           <i className="mr-50" data-feather="help-circle"></i> FAQ
         </a>
-        <a className="dropdown-item" href="#">
-          <i className="mr-50" data-feather="power"></i> Logout
+        <a className="dropdown-item" onClick={logout}>
+          <i className="mr-50" data-feather="power"></i> Đăng xuất
         </a>
       </div>
     </div>
