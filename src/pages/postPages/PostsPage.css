@@ -22,6 +22,7 @@
     background-color: #f7e3e1;
     display: flex;
     justify-content: center;
+    min-width: 380px;
 }
 
 .title {
