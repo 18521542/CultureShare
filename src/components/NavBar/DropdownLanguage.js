@@ -19,7 +19,7 @@ const languagesList = [
   }
 ];
 function DropdownLanguage() {
-  const [language, setLanguage] = useState(languagesList[0]);
+  const [language, setLanguage] = useState(languagesList[3]);
 
   return (
     <div className="dropdown">
