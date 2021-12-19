@@ -35,7 +35,7 @@ function BlogEdit() {
 
   return (
     <div className="container-fluid" style={{ color: "#5e5873", lineHeight: 1.2 }}>
-      <Breadcrumb title="Blog Edit" parent="Home" active="Edit" />
+      <Breadcrumb title="Viết bài" parent="Home" active="Viết bài"/>
       <div className="card mx-0 border-light shadow w-100 mb-3">
         <div className="card-body">
           <Avatar title="Johnny" image="/img/avatar-1.png" />
@@ -74,7 +74,7 @@ function BlogEdit() {
                   <option value="Draft">Draft</option>
                 </select>
               </div>
-              <div className="mb-3 col-12">
+              <div className="mb-3 col-12" >
                 <label className="form-label">Content</label>
                 <Editor
                   editorClassName="border border-1"
@@ -84,7 +84,7 @@ function BlogEdit() {
                 />
               </div>
 
-              <div className="mb-2 col-12" sm="12">
+              <div className="my-2 col-12" sm="12">
                 <div className="border rounded p-2">
                   <h4 className="mb-2">Featured Image</h4>
                   <div className="card border-0 flex-column flex-md-row">
