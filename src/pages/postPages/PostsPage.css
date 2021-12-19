@@ -1,6 +1,7 @@
 .thread-container{
     padding: 100px;
     min-height: none;
+    min-width: 600px;
 }
 
 .header-container{
@@ -16,12 +17,14 @@
     flex-direction: row;
     justify-content: space-between;
     padding:10px 0 10px 0;
+    min-width: 600px;
 }
 
 .posts-list-container {
     /* height: 1200px; */
     background-color: #f7e3e1;
     padding: 50px 10px 50px 10px;
+    min-width: 600px;
 }
 
 .title {

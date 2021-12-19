@@ -91,7 +91,6 @@ function PostsPage() {
             {/* 2 btn */}
             <div className="action-container">
                 {renderTwoButton()}
-                <span className="btn-add"><Button variant="success">Add</Button>{' '}</span>
             </div>
 
             {/* List */}
